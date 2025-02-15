@@ -149,7 +149,7 @@ def calculate_resistance(colors):
 
 def main():
 
-    image_path = "E:/Opencvpython/3444.jpg"
+    image_path = "E:/Opencvpython/bf6de6e8-d4d7-41e2-bbfd-c68a04da8762 (1).jpg"
     image = cv2.imread(image_path)
 
     if image is None:
@@ -165,9 +165,9 @@ def main():
 
     # Draw detected bands and resistance
     for i, color in enumerate(detected_colors):
-        cv2.putText(resized, color, (50, 50 + i * 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
+        cv2.putText(resized, color, (50, 50 + i * 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2)
 
-    cv2.putText(resized, resistance, (50, 300), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 255, 0), 3)
+    cv2.putText(resized, resistance, (400, 100), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2)
     cv2.imshow("Detected Colors and Resistance", resized)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
